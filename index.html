@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currículum Docente · María José Torres Prioris</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:   #302d2d;  
+  --navy2:  #333333;
+  --gold:   #2e87ad;  
+  --cream:  #FFFFFF;
+  --sand:   #F5F5F5;
+  --ink:    #111111;
+  --muted:  #6B6B6B;
+  --border: #E5E5E5;
+  --green:  #2e87ad; 
+}
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--navy);
+    color: #fff;
+    padding: 56px 0 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    border: 1px solid rgba(200,168,75,.25);
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: 10%;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    border: 1px solid rgba(200,168,75,.15);
+  }
+  .header-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+  }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(36px, 6vw, 58px);
+    line-height: 1.05;
+    color: #fff;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+  }
+  .header-meta {
+    font-size: 14px;
+    color: rgba(255,255,255,.65);
+    line-height: 1.7;
+    max-width: 560px;
+    margin-bottom: 28px;
+  }
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+  .badge {
+    font-size: 11.5px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+  }
+  .badge-gold  { background: rgba(200,168,75,.18); color: #E8C96A; border: 1px solid rgba(200,168,75,.3); }
+  .badge-green { background: rgba(26,102,64,.3); color: #6fcf97; border: 1px solid rgba(111,207,151,.25); }
+
+  .btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 11px 22px;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: background .2s, transform .15s;
+  }
+  .btn-download:hover { background: #dbb94f; transform: translateY(-1px); }
+  .btn-download svg { width: 15px; height: 15px; }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--sand);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+  }
+  nav a {
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 14px 16px;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color .2s, border-color .2s;
+  }
+  nav a:hover { color: var(--navy); border-bottom-color: var(--gold); }
+
+  /* ── MAIN ── */
+  main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 32px 80px;
+  }
+
+  /* ── RESUMEN ── */
+  .resumen {
+    background: #fff;
+    border-left: 3px solid var(--gold);
+    padding: 28px 32px;
+    margin: 48px 0 0;
+    border-radius: 0 6px 6px 0;
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--ink);
+  }
+  .resumen strong { color: var(--navy); font-weight: 500; }
+
+  /* ── STATS ── */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+    margin: 28px 0 56px;
+  }
+  .stat {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .stat-n {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-l {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.35;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── SECTIONS ── */
+  section { margin-bottom: 60px; }
+
+  .sec-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .sec-num {
+    font-family: 'Fraunces', serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--gold);
+    font-style: italic;
+    min-width: 20px;
+  }
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--navy);
+    letter-spacing: -0.2px;
+  }
+
+  /* ── ENTRIES ── */
+  .entry {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: start;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--sand);
+  }
+  .entry:last-child { border-bottom: none; }
+  .entry-title {
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 3px;
+  }
+  .entry-sub {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .entry-date {
+    font-size: 12px;
+    color: var(--muted);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    padding-top: 2px;
+    text-align: right;
+  }
+
+  /* ── FORMACIÓN TABLE ── */
+  .formacion-note {
+    background: var(--sand);
+    border-radius: 6px;
+    padding: 14px 18px;
+    font-size: 13.5px;
+    color: var(--muted);
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+  .formacion-note strong { color: var(--navy); }
+
+  .formacion-complementaria {
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+    padding: 12px 0 4px;
+    border-top: 1px solid var(--sand);
+    line-height: 1.6;
+  }
+
+  /* ── COMUNICACIONES (enlaces) ── */
+  .comunicacion {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--sand);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .comunicacion:last-child { border-bottom: none; }
+  .com-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: var(--gold);
+    background: rgba(200,168,75,.1);
+    border: 1px solid rgba(200,168,75,.3);
+    border-radius: 3px;
+    padding: 3px 7px;
+    white-space: nowrap;
+    margin-top: 2px;
+  }
+  .com-body { }
+  .com-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--navy);
+    text-decoration: none;
+    line-height: 1.5;
+    border-bottom: 1px solid transparent;
+    transition: border-color .2s, color .2s;
+    display: inline;
+  }
+  .com-link:hover { color: var(--navy2); border-bottom-color: var(--gold); }
+  .com-link svg {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    opacity: 0.5;
+    width: 13px; height: 13px;
+  }
+  .com-meta {
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-top: 4px;
+    line-height: 1.5;
+  }
+  .com-type {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 6px;
+    font-weight: 500;
+  }
+  .oral { background: #EEF6F0; color: var(--green); }
+  .escrita { background: #EAF0F8; color: var(--navy); }
+
+  /* ── PROYECTOS ── */
+  .proyecto-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin-bottom: 12px;
+  }
+  .proyecto-card h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .proyecto-card p {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .proyecto-card .pdate {
+    font-size: 12px;
+    color: var(--gold);
+    font-weight: 500;
+    margin-top: 8px;
+  }
+
+  /* ── INTERNACIONALIZACIÓN ── */
+  .intl-item {
+    display: flex;
+    gap: 14px;
+    align-items: start;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--sand);
+  }
+  .intl-dot {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+  .intl-text { font-size: 14px; color: var(--ink); line-height: 1.6; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,.45);
+    text-align: center;
+    padding: 28px 32px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    .entry { grid-template-columns: 1fr; }
+    .entry-date { text-align: left; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    h1 { font-size: 32px; }
+    .header-inner, .nav-inner, main { padding-left: 20px; padding-right: 20px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════════════════════ -->
+<header>
+  <div class="header-inner">
+  <img src="profile.jpg" alt="María José Torres-Prioris" style="width:150px;height:150px;border-radius:30%;object-fit:cover;border:1px solid rgba(200,168,75,.5);margin-bottom:20px;display:block;">
+    <div class="eyebrow">Currículum Docente</div>
+    <h1>María José Torres-Prioris</h1>
+    <div class="header-meta">
+      Área de Psicobiología · Dpto. de Psicobiología y CC del Comportamiento<br>
+      Facultad de Psicología · Universidad de Málaga
+    </div>
+    <div class="badges">
+      <span class="badge badge-green">2× DOCENTIA Excelente</span>
+      <span class="badge badge-gold">Premio Docente UMA &lt;35 años · 2020-21</span>
+      <span class="badge badge-gold">IMFAHE Outstanding Professional</span>
+      <span class="badge badge-green">1 Quinquenio reconocido</span>
+    </div>
+    <a href="cv/CV_Docente.pdf" download class="btn-download">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      Descargar CV docente
+    </a>
+  </div>
+</header>
+
+<!-- ══ NAV ══════════════════════════════════════════════════════════════════ -->
+<nav aria-label="Secciones">
+  <div class="nav-inner">
+    <a href="#resumen">Resumen</a>
+    <a href="#innovacion">Innovación</a>
+    <a href="#formacion">Formación</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#coordinacion">Coordinación</a>
+    <a href="#comunicaciones">Comunicaciones</a>
+    <a href="#internacional">Internacional</a>
+  </div>
+</nav>
+
+<!-- ══ MAIN ═════════════════════════════════════════════════════════════════ -->
+<main>
+
+  <!-- RESUMEN -->
+  <div class="resumen" id="resumen">
+    Profesora con formación investigadora en neuropsicología del lenguaje, que ha desarrollado su trayectoria docente mediante contratos predoctoral (<strong>FPU, Ministerio de Educación, 2016</strong>) y postdoctoral con colaboración docente en el Área de Psicobiología de la UMA, así como un contrato como <strong>Profesora Ayudante Doctora en el Dpto. de Psicología Evolutiva y de la Educación (UMA)</strong>. A lo largo de nueve cursos académicos ha impartido más de 800&nbsp;h de docencia reglada en Grado y Máster, con dos evaluaciones <strong>EXCELENTE</strong> en DOCENTIA, un quinquenio reconocido y el <strong>Premio Docente UMA</strong> (menores de 35 años, 2020-21).
+  </div>
+
+  <!-- STATS -->
+  <div class="stats" aria-label="Indicadores clave">
+    <div class="stat"><div class="stat-n">9</div><div class="stat-l">Años de<br>experiencia</div></div>
+    <div class="stat"><div class="stat-n">800+</div><div class="stat-l">Horas de<br>docencia reglada</div></div>
+    <div class="stat"><div class="stat-n">24</div><div class="stat-l">TFG<br>dirigidos</div></div>
+    <div class="stat"><div class="stat-n">9</div><div class="stat-l">TFM<br>dirigidos</div></div>
+    <div class="stat"><div class="stat-n">1</div><div class="stat-l">Tesis doctoral<br>codirigida</div></div>
+    <div class="stat"><div class="stat-n">900+</div><div class="stat-l">Horas formación<br>docente</div></div>
+  </div>
+
+  <!-- ── 1. INNOVACIÓN ─────────────────────────────────────────────────── -->
+  <section id="innovacion">
+    <div class="sec-header">
+      <span class="sec-num">1</span>
+      <h2>Experiencia en innovación educativa</h2>
+    </div>
+
+    <div class="entry">
+      <div>
+        <div class="entry-title">Aula invertida en Fundamentos de Psicobiología II</div>
+        <div class="entry-sub">Creación de vídeos originales de neuroanatomía para trabajo previo al aula, combinados con práctica con modelos anatómicos y neuroimagen.</div>
+      </div>
+      <div class="entry-date">2020/21 – 2024/25</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <div class="entry-title">Ciclos de Mejora en el Aula (CIMA) en Neuropsicología</div>
+        <div class="entry-sub">Grado en Psicología y Grado en Logopedia. Incorporación de aprendizaje basado en problemas y método del caso.</div>
+      </div>
+      <div class="entry-date">2016/17 – 2019/20</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <div class="entry-title">Investigación sobre rendimiento académico en Psicobiología</div>
+        <div class="entry-sub">Estudio del impacto de personalidad, constancia e implicación académica. 3 comunicaciones en congresos internacionales de educación (ICESD y Congreso Nodos del Conocimiento).</div>
+      </div>
+      <div class="entry-date">2021</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <div class="entry-title">Gamificación en el aula</div>
+        <div class="entry-sub">Implementación de dinámicas de gamificación en asignaturas del Área de Psicobiología.</div>
+      </div>
+      <div class="entry-date">2019 – 2022</div>
+    </div>
+  </section>
+
+  <!-- ── 2. FORMACIÓN ──────────────────────────────────────────────────── -->
+  <section id="formacion">
+    <div class="sec-header">
+      <span class="sec-num">2</span>
+      <h2>Formación didáctica recibida</h2>
+    </div>
+
+    <div class="formacion-note">
+      <strong>Más de 900 horas acreditadas</strong> de formación en innovación docente: metodologías activas, evaluación formativa, analítica del aprendizaje, diversidad funcional, contenidos digitales y comunicación docente.
+    </div>
+
+    <div class="entry">
+      <div>
+        <div class="entry-title">NOVEL 25 — Iniciación a la Mejora de la Docencia Universitaria</div>
+        <div class="entry-sub">Universidad de Málaga · 90 h</div>
+      </div>
+      <div class="entry-date">2025</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <div class="entry-title">Formación para la docencia innovadora en programas online (ed. 2)</div>
+        <div class="entry-sub">Universidad Internacional de Andalucía · 175 h · Calificación: 9,3</div>
+      </div>
+      <div class="entry-date">2021</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <div class="entry-title">Seminario de formación para profesorado novel, 3.ª fase</div>
+        <div class="entry-sub">Universidad de Málaga · 100 h</div>
+      </div>
+      <div class="entry-date">2021</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <div class="entry-title">Seminario de formación para profesorado novel, 2.ª fase</div>
+        <div class="entry-sub">Universidad de Málaga · 100 h</div>
+      </div>
+      <div class="entry-date">2020</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <div class="entry-title">XVI Curso de formación para profesorado universitario novel, 1.ª fase</div>
+        <div class="entry-sub">Universidad de Málaga · 100 h</div>
+      </div>
+      <div class="entry-date">2018</div>
+    </div>
+
+    <p class="formacion-complementaria">
+      Formación complementaria: analítica de datos educativos, visual thinking, evaluación formativa, diversidad funcional, ABP, creación de contenidos digitales multimedia, coaching educativo, oratoria digital (UNIA, UMA, UDIMA, 2018–2025).
+    </p>
+  </section>
+
+  <!-- ── 3. PROYECTOS ──────────────────────────────────────────────────── -->
+  <section id="proyectos">
+    <div class="sec-header">
+      <span class="sec-num">3</span>
+      <h2>Participación en proyectos anteriores</h2>
+    </div>
+
+    <div class="proyecto-card">
+      <h3>Proyecto de innovación docente «Aulas Clínicas»</h3>
+      <p>Miembro del equipo. Elaboración de material audiovisual clínico con pacientes reales de afasia y enfermedades neurodegenerativas para el Máster en Psicología General Sanitaria. Selección de casos, grabación, edición y organización con criterios éticos y de confidencialidad.</p>
+      <div class="pdate">2019 – 2021</div>
+    </div>
+
+    <div class="proyecto-card">
+      <h3>Proyecto de Innovación Educativa «Programa de mentorización para estudiantes de doctorado en Psicología»</h3>
+      <p>Referencia GIE22-097. Participación como Mentora Senior en el diseño e implementación del programa de mentorazgo de doctorandos de la Facultad de Psicología (UMA).</p>
+      <div class="pdate">2022 – 2024</div>
+    </div>
+  </section>
+
+  <!-- ── 4. COORDINACIÓN ───────────────────────────────────────────────── -->
+  <section id="coordinacion">
+    <div class="sec-header">
+      <span class="sec-num">4</span>
+      <h2>Coordinación docente y trabajo en equipo</h2>
+    </div>
+
+    <div class="entry">
+      <div>
+        <div class="entry-title">Coordinadora de los Trabajos Fin de Máster · Facultad de Psicología (UMA)</div>
+        <div class="entry-sub">4 titulaciones oficiales. Planificación, seminarios, asignación de tutores, comisiones y defensas.</div>
+      </div>
+      <div class="entry-date">Desde 2025</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <div class="entry-title">Coordinadora de Neuropsicología</div>
+        <div class="entry-sub">Grado en Logopedia · Universidad de Málaga</div>
+      </div>
+      <div class="entry-date">2025/26</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <div class="entry-title">Coordinadora de Psicología del Desarrollo y Adquisición del Lenguaje I y II</div>
+        <div class="entry-sub">Grado en Logopedia · Universidad de Málaga</div>
+      </div>
+      <div class="entry-date">2023/24 – 2024/25</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <div class="entry-title">Miembro de la Comisión Coordinadora de 1.er curso</div>
+        <div class="entry-sub">Grado en Logopedia · Universidad de Málaga</div>
+      </div>
+      <div class="entry-date">2023/24</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <div class="entry-title">Dirección de TFG (24), TFM (9) y codirección de tesis doctoral</div>
+        <div class="entry-sub">Tesis: Sobresaliente <em>cum laude</em>, Mención Internacional · Defensa 03/2026. Más de 10 tribunales de máster.</div>
+      </div>
+      <div class="entry-date">2018 – 2026</div>
+    </div>
+
+    <div class="entry">
+      <div>
+        <div class="entry-title">Mentora Senior · Programa de mentorazgo de doctorandos</div>
+        <div class="entry-sub">Facultad de Psicología · Universidad de Málaga</div>
+      </div>
+      <div class="entry-date">2022 – 2026</div>
+    </div>
+  </section>
+
+  <!-- ── COMUNICACIONES ────────────────────────────────────────────────── -->
+  <section id="comunicaciones">
+    <div class="sec-header">
+      <span class="sec-num"></span>
+      <h2>Comunicaciones en congresos docentes</h2>
+    </div>
+
+    <div class="comunicacion">
+      <span class="com-tag">TC03</span>
+      <div class="com-body">
+        <a href="publicaciones/TC03.pdf" download class="com-link">
+          Factores asociados al rendimiento académico en la asignatura de Psicobiología: Personalidad, constancia en el esfuerzo e implicación académica
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+        <span class="com-type oral">Comunicación oral</span>
+        <div class="com-meta">
+          López-Barroso D. y Torres-Prioris, M.J. · <em>II Congreso Internacional Nodos del Conocimiento</em> · 25-26 noviembre 2021
+        </div>
+      </div>
+    </div>
+
+    <div class="comunicacion">
+      <span class="com-tag">TC02</span>
+      <div class="com-body">
+        <a href="publicaciones/TC02.pdf" download class="com-link">
+          The relationship between personality traits and academic achievement in Psychobiology course among Psychology university students
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+        <span class="com-type oral">Comunicación oral</span>
+        <div class="com-meta">
+          Torres-Prioris, M.J., Peñaloza, C., and López-Barroso D. · <em>9th International Congress of Educational Sciences and Development (ICESD)</em> · 20-22 octubre 2021
+        </div>
+      </div>
+    </div>
+
+    <div class="comunicacion">
+      <span class="com-tag">TC01</span>
+      <div class="com-body">
+        <a href="publicaciones/TC01.pdf" download class="com-link">
+          Docencia universitaria en tiempos de la COVID-19: utilidad del aula invertida y la gamificación
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+        <span class="com-type escrita">Comunicación escrita</span>
+        <div class="com-meta">
+          Torres-Prioris, M.J., Peñaloza, C., Dávila G., and López-Barroso D. · <em>9th International Congress of Educational Sciences and Development (ICESD)</em> · 20-22 octubre 2021
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INTERNACIONAL ─────────────────────────────────────────────────── -->
+  <section id="internacional">
+    <div class="sec-header">
+      <span class="sec-num"></span>
+      <h2>Internacionalización docente</h2>
+    </div>
+
+    <div class="intl-item">
+      <div class="intl-dot"></div>
+      <div class="intl-text">
+        Participación en <strong>Virtual International Days 2021</strong> dentro del programa ERASMUS+ organizado por el University College of Northern Denmark. Noviembre 2021.
+      </div>
+    </div>
+
+    <div class="intl-item">
+      <div class="intl-dot"></div>
+      <div class="intl-text">
+        Miembro de la Plataforma de Talento <strong>IMFAHE</strong> (International Mentoring Foundation for the Advancement of Higher Education) en el programa International Professional Development Program for Professors (IPDP). Distinción <em>Outstanding Professional</em>. 2021.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════════════════════ -->
+<footer>
+  <p>María José Torres-Prioris· Área de Psicobiología · Universidad de Málaga</p>
+  <p style="margin-top:6px">
+    <a href="cv/CV_Docente.pdf" download>Descargar CV docente</a>
+  </p>
+  <p style="margin-top:6px">© 2026 Torres-Prioris· Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
